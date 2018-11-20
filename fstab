@@ -1,0 +1,28 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda3
+#UUID=4feb589a-fca6-498e-89a0-ec3d16608b9d	
+/dev/sda3					/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda1
+#UUID=62ee7b72-3043-467f-9c51-a21d8a82c8b7	
+/dev/sda1					/boot     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sda4
+#UUID=90c03177-bd28-4af1-b30a-b868e8233fcd	
+/dev/sda4					/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sda2
+#UUID=3c478911-5676-4ad2-8424-911c565527ce	
+/dev/sda2 					none      	swap      	defaults,pri=-2	0 0
+
+UUID=D46A726A6A72496E				/home/ylan/drives/Acer		ntfs-3g default 	0 0 
+UUID=329406480A8D9D91				/home/ylan/drives/Netbook	ntfs-3g default 	0 0 
+UUID=8C2864BF2864A9C2				/home/ylan/drives/Windows10	ntfs-3g default 	0 0 
+UUID=3760E84B0C9CBA6D				/home/ylan/drives/Iomega	ntfs-3g defaults,exec,uid=1000,gid=1000 	0 0
+ 
+
+ 
+/home/ylan/Dropbox/.tmsu/db /home/ylan/dyn tmsu user,noauto 0 0
