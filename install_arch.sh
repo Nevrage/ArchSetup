@@ -192,7 +192,7 @@ if [[ $scope == *"scope_server"* ]]; then
   pacman -S xorg xorg-init xterm
   yaourt -S i3-gaps 
   cp /home/$user/Dotfiles/profile /home/$user/.profile
-  cp /home/$user/Dotfiles/startx /home/$user/.startx
+  cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
   cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
 fi
 
