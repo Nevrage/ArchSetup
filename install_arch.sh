@@ -190,7 +190,7 @@ fi
 scope_graph='workstation home'
 if [[ $scope == *"scope_server"* ]]; then
   # different .profile from here 
-  pacman -S -asdeps -noconfirm xorg xorg-xinit xterm
+  pacman -S --noconfirm xorg xorg-xinit xterm
   yaourt -S i3-gaps 
   cp /home/$user/Dotfiles/profile /home/$user/.profile
   chmod 755 /home/$user/.profile
