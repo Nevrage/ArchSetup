@@ -1,8 +1,7 @@
-# passwd && yes | pacman -Sy openssh net-tools && systemctl start sshd && ifconfig | 192
+# passwd && yes | pacman -Sy openssh net-tools && systemctl start sshd && ifconfig | grep 192 
     ## connect through ssh and paste this file
 # OR 
-# pacman -Sy curl 
-    ## And source <(culr url.of/script)
+# Source <(culr url.of/script)
 # ====================
  
 # change to some dialog stuff especially for drive and scope selection 
@@ -26,6 +25,7 @@ echo "
 The chosen drive will be erased.
 *********************************
 "
+lsblk -l 
 read drive
 clear
 echo "
@@ -43,6 +43,7 @@ also available: docker and vbox
 read scope
 clear
 
+# Is that really useful ?
 export user
 export pw
 export drive
@@ -145,30 +146,33 @@ echo "$user|$pw" | chpasswd
 echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --noclear %I $TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf 
 
 ############################
-# keep the scope variable somewhere 
-pacman -Sy firefox python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb
+# install R 
+pacman -Sy python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb
 # Potentially add t he following:
 # arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
 sudo pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
 jupyter labextension install @jupyterlab/google-drive
+echo " 
+NOCONFIRM=1
+BUILD_NOCONFIRM=1
+EDITFILES=0" > /home/$user/.yaourtrc
 yaourt -S polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits #dofus
 sudo pip install youtube_dl==2017.07.30.1
 sudo pip3 install greenlet==0.4.10
 #github and ranger stuff 
 # replace yaourt by su command
-# pacman no confirm
-# some packages are still for basic 
-# from the ubuntu script 
+# download repos 
+# install dotfiles 
 ############################
 
 scope_notbasic='server workstation home vbox'
 if [[ $scope == *"scope_notbasic"* ]]; then
     cd /home/$user 
-    git clone https://github.com/Nevrage/DotFile.git /home/$user
+    git clone https://github.com/Nevrage/Dotfiles.git /home/$user
     mkdir -p /home/$user/.vim/bundle/
     git clone https://github.com/VundleVim/Vundle.vim.git /home/$user/.vim/bundle/Vundle.vim
-    cp /home/$user/DotFile/tty/vimrc ~/.vimrc
-    vim +PluginInstall +qall #su here 
+    cp /home/$user/Dotfiles/tty/vimrc ~/.vimrc
+    vim +PluginInstall +qall
 fi
 
 
@@ -186,7 +190,10 @@ scope_graph='workstation home'
 if [[ $scope == *"scope_server"* ]]; then
   # different .profile from here 
   pacman -S xorg xorg-init xterm
-  yaourt -S i3-gaps #terminalizer
+  yaourt -S i3-gaps 
+  cp /home/$user/Dotfiles/profile /home/$user/.profile
+  cp /home/$user/Dotfiles/startx /home/$user/.startx
+  cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
 fi
 
 
@@ -197,13 +204,9 @@ fi
 
 echo $host > /etc/hostname
 pacman -Syu
-rm -r /home/$user/DotFile
+rm -r /home/$user/DotFiles
 exit
 EOF
 umount -r /mnt
 reboot
 
-## run until no diff between new and current
-
-
-# properly define the scope and make auto login optional 
