@@ -147,7 +147,7 @@ echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --n
 
 ############################
 # install R 
-pacman -Sy python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb
+pacman -Sy -noconfirm python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb
 # Potentially add t he following:
 # arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
 sudo pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
@@ -178,7 +178,8 @@ fi
 
 scope_server='server workstation home'
 if [[ $scope == *"scope_server"* ]]; then
-  pacman -S docker
+  pacman -S -noconfirm docker
+  cp ~/Dotfiles/tty/bashrc ~/.bashrc 
   systemctl enable docker.service
   # portainer
   # .profile here for non graphic
@@ -189,9 +190,10 @@ fi
 scope_graph='workstation home'
 if [[ $scope == *"scope_server"* ]]; then
   # different .profile from here 
-  pacman -S -asdeps xorg xorg-xinit xterm
+  pacman -S -asdeps -noconfirm xorg xorg-xinit xterm
   yaourt -S i3-gaps 
   cp /home/$user/Dotfiles/profile /home/$user/.profile
+  chmod 755 /home/$user/.profile
   cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
   cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
 fi
@@ -204,7 +206,7 @@ fi
 
 echo $host > /etc/hostname
 pacman -Syu
-rm -r /home/$user/DotFiles
+# rm -r /home/$user/DotFiles
 exit
 EOF
 umount -r /mnt
