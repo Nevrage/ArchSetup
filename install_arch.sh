@@ -1,14 +1,9 @@
 # passwd && yes | pacman -Sy openssh net-tools && systemctl start sshd && ifconfig | grep 192 
     ## connect through ssh and paste this file
 # OR 
-# Source <(culr url.of/script)
+# Source <(culr https://raw.githubusercontent.com/Nevrage/ArchSetup/master/install_arch.sh)
 # ====================
- 
-# change to some dialog stuff especially for drive and scope selection 
-# would you like to run the script as is or have a chance to edit it firts ?
-# read answer 
-# if answer is yes 
-# dl the script, edit and run upon quitting
+
 clear
 echo "Choose a username:"
 read user 
@@ -19,7 +14,6 @@ clear
 echo "What is the name of this computer?"
 read host
 clear
-lsblk
 echo " 
 *********************************
 The chosen drive will be erased.
@@ -52,11 +46,7 @@ export scope
 
 
 wipefs -a $drive 
-## alternatively could try the following 
-## parted rm /dev/sda 1
-## wipefs -a -n 5 or nothing 
-## dd 
-## scrub
+## alternatively could try the following: parted rm /dev/sda1, wipefs -a -n 5 or nothing, dd, scrub 
 
 timedatectl set-ntp true
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk $drive
@@ -98,7 +88,7 @@ pacstrap /mnt base base-devel vim ranger
 genfstab -U /mnt >> /mnt/etc/fstab
 
 
-cat << EOF | arch-chroot /mnt /bin/bash -c 'user=$user'
+cat << EOF | arch-chroot /mnt /bin/bash 
  
 
 pacman -S --noconfirm networkmanager git curl lm_sensors
@@ -115,12 +105,25 @@ grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner -s /bin/bash admin
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo "root:$pw" ｜chpasswd
-pacman -S --noconfirm openssh net-tools curl
+pacman -S --noconfirm openssh net-tools 
 echo -e "\nPermitRootLogin yes\n" >> /etc/ssh/sshd_config
 systemctl enable sshd
-echo -e "[options] \n colors\n ILoveCandy\n HoldPkg     = pacman glibc\n Architecture = auto\n Color\n CheckSpace\n SigLevel    = Required DatabaseOptional\n LocalFileSigLevel = Optional\n \n [core]\n Include = /etc/pacman.d/mirrorlist\n \n [extra]\n Include = /etc/pacman.d/mirrorlist\n \n [community]\n Include = /etc/pacman.d/mirrorlist\n \n [multilib]\n Include = /etc/pacman.d/mirrorlist" > /etc/pacman.conf
+echo -e "[options] \n colors\n ILoveCandy\n HoldPkg     = pacman glibc\n Architecture = auto\n Colors\n CheckSpace\n SigLevel    = Required DatabaseOptional\n LocalFileSigLevel = Optional\n \n [core]\n Include = /etc/pacman.d/mirrorlist\n \n [extra]\n Include = /etc/pacman.d/mirrorlist\n \n [community]\n Include = /etc/pacman.d/mirrorlist\n \n [multilib]\n Include = /etc/pacman.d/mirrorlist" > /etc/pacman.conf
 pacman -Sy
 cd /root
+
+echo " 
+NOCONFIRM=1
+BUILD_NOCONFIRM=1
+EDITFILES=0" > /home/admin/.yaourtrc
+
+
+pacman -Sy -noconfirm python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb steam xork xorg-xinit xterm 
+
+
+pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
+pip install youtube_dl==2017.07.30.1
+pip3 install greenlet==0.4.10
 
 su -c "
 cd /tmp
@@ -135,7 +138,9 @@ cd ..
 cd /tmp
 git clone https://aur.archlinux.org/mingetty.git 
 cd mingetty 
-yes | makepkg -si " - admin
+yes | makepkg -si 
+yaourt -Sy polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits dropbox steam-fonts multimc5 openspades leagueoflegends glxosd #dofus 
+ " - admin
 
 userdel -r admin
 
@@ -145,47 +150,18 @@ useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner 
 echo "$user|$pw" | chpasswd
 echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --noclear %I $TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf 
 
-pacman -Sy -noconfirm python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb
-# Potentially add t he following:
-# arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
-sudo pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
-jupyter labextension install @jupyterlab/google-drive
-echo " 
-NOCONFIRM=1
-BUILD_NOCONFIRM=1
-EDITFILES=0" > /home/$user/.yaourtrc
-yaourt -S polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits #dofus
-sudo pip install youtube_dl==2017.07.30.1
-sudo pip3 install greenlet==0.4.10
-
-scope_notbasic='server workstation home vbox'
-if [[ $scope == *"scope_notbasic"* ]]; then
-	ls
-fi
-
 cd /home/$user 
-git clone https://github.com/Nevrage/Dotfiles.git /home/$user
+git clone https://github.com/Nevrage/Dotfiles.git
 mkdir -p /home/$user/.vim/bundle/
 git clone https://github.com/VundleVim/Vundle.vim.git /home/$user/.vim/bundle/Vundle.vim
 cp /home/$user/Dotfiles/tty/vimrc ~/.vimrc
-vim +PluginInstall +qall
-
-pacman -S -noconfirm docker
+# vim +PluginInstall +qall
 cp ~/Dotfiles/tty/bashrc ~/.bashrc 
-systemctl enable docker.service
-# portainer
-# .profile here for non graphic
-usermod -G docker $user
-# different .profile from here 
-pacman -S --noconfirm xorg xorg-xinit xterm
-yaourt -S i3-gaps 
 cp /home/$user/Dotfiles/profile /home/$user/.profile
 chmod 755 /home/$user/.profile
 cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
 echo $user > /home/$user/test
 cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
-pacman -S steam
-yaourt -S dropbox steam-fonts multimc5 openspades leagueoflegends glxosd
 
 echo $host > /etc/hostname
 pacman -Syu
@@ -203,5 +179,15 @@ reboot
 # install dotfiles 
 # remove dotfiles 
 # forward scope or hook instance install script somewhere 
+# change to some dialog stuff especially for drive and scope selection 
 # install R properly 
+# would you like to run the script as is or have a chance to edit it firts ?
+# pacman -S -noconfirm docker
+# systemctl enable docker.service
+# # portainer
+# # .profile here for non graphic
+# usermod -G docker $user
+# Potentially add t he following:
+# arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
+# jupyter labextension install @jupyterlab/google-drive
 ############################
