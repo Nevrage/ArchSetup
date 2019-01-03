@@ -143,7 +143,7 @@ cd /tmp
 git clone https://aur.archlinux.org/mingetty.git 
 cd mingetty 
 yes | makepkg -si 
-yaourt -Sy polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits dropbox steam-fonts multimc5 openspades leagueoflegends glxosd #dofus 
+yaourt -Sy polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits dropbox steam-fonts multimc5 openspades # leagueoflegends glxosd dofus 
  " - admin
 
 userdel -r admin
@@ -158,13 +158,12 @@ cd /home/$user
 git clone https://github.com/Nevrage/Dotfiles.git
 mkdir -p /home/$user/.vim/bundle/
 git clone https://github.com/VundleVim/Vundle.vim.git /home/$user/.vim/bundle/Vundle.vim
-cp /home/$user/Dotfiles/tty/vimrc ~/.vimrc
+cp /home/$user/Dotfiles/tty/vimrc /home/$user/.vimrc
 # vim +PluginInstall +qall
-cp ~/Dotfiles/tty/bashrc ~/.bashrc 
-cp /home/$user/Dotfiles/profile /home/$user/.profile
+cp /home/$user/Dotfiles/tty/bashrc /home/$user/.bashrc 
+cp /home/$user/Dotfiles/tty/profile /home/$user/.profile
 chmod 755 /home/$user/.profile
 cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
-echo $user > /home/$user/test
 cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
 
 echo $host > /etc/hostname
@@ -177,6 +176,7 @@ reboot
 ############################
 # TODO 
 ############################
+# reboot if not argument otherwise plug in the instance's script here
 #github and ranger stuff 
 # replace yaourt by su command
 # download repos 
