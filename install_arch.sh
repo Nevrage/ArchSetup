@@ -98,7 +98,7 @@ pacstrap /mnt base base-devel vim ranger
 genfstab -U /mnt >> /mnt/etc/fstab
 
 
-cat << EOF | arch-chroot /mnt /bin/bash
+cat << EOF | arch-chroot /mnt /bin/bash -c 'user=$user'
  
 
 pacman -S --noconfirm networkmanager git curl lm_sensors
