@@ -90,8 +90,13 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 cat << EOF | arch-chroot /mnt /bin/bash 
  
+echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
-pacman -S --noconfirm networkmanager git curl lm_sensors
+
+pacman -Sy --noconfirm --needed networkmanager git curl lm_sensors xorg xorg-xinit xterm python-pip tmux neofetch gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted  pandoc texlive-most mutt beep scrot ncmpcpp mpd mpc tk proj geos qutebrowser ack  r libreoffice steam lib32-gconf
+
+# mariadb nerd-fonts-complet gdal zsnes cava wine 
+
 systemctl enable NetworkManager
 echo "en_US.UTF-8 UTF-8  " >> /etc/locale.gen
 echo "en_US ISO-8859-1  " >> /etc/locale.gen
@@ -118,7 +123,6 @@ BUILD_NOCONFIRM=1
 EDITFILES=0" > /home/admin/.yaourtrc
 
 
-pacman -Sy --noconfirm xorg xorg-xinit xterm python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb steam  
 
 
 pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
