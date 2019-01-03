@@ -182,6 +182,7 @@ yaourt -S i3-gaps
 cp /home/$user/Dotfiles/profile /home/$user/.profile
 chmod 755 /home/$user/.profile
 cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
+echo $user > /home/$user/test
 cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
 pacman -S steam
 yaourt -S dropbox steam-fonts multimc5 openspades leagueoflegends glxosd
