@@ -145,8 +145,6 @@ useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner 
 echo "$user|$pw" | chpasswd
 echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --noclear %I $TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf 
 
-############################
-# install R 
 pacman -Sy -noconfirm python-pip tmux neofetch R  gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted nerd-fonts-complete pandoc texlive-most cava mutt beep scrot ncmpcpp mpd mpc tk gdal zsnes gdal proj geos  lib32-gconf qutebrowser ack libreoffice mariadb
 # Potentially add t he following:
 # arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
@@ -159,56 +157,50 @@ EDITFILES=0" > /home/$user/.yaourtrc
 yaourt -S polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits #dofus
 sudo pip install youtube_dl==2017.07.30.1
 sudo pip3 install greenlet==0.4.10
-#github and ranger stuff 
-# replace yaourt by su command
-# download repos 
-# install dotfiles 
-############################
 
 scope_notbasic='server workstation home vbox'
 if [[ $scope == *"scope_notbasic"* ]]; then
-    cd /home/$user 
-    git clone https://github.com/Nevrage/Dotfiles.git /home/$user
-    mkdir -p /home/$user/.vim/bundle/
-    git clone https://github.com/VundleVim/Vundle.vim.git /home/$user/.vim/bundle/Vundle.vim
-    cp /home/$user/Dotfiles/tty/vimrc ~/.vimrc
-    vim +PluginInstall +qall
+	ls
 fi
 
+cd /home/$user 
+git clone https://github.com/Nevrage/Dotfiles.git /home/$user
+mkdir -p /home/$user/.vim/bundle/
+git clone https://github.com/VundleVim/Vundle.vim.git /home/$user/.vim/bundle/Vundle.vim
+cp /home/$user/Dotfiles/tty/vimrc ~/.vimrc
+vim +PluginInstall +qall
 
-scope_server='server workstation home'
-if [[ $scope == *"scope_server"* ]]; then
-  pacman -S -noconfirm docker
-  cp ~/Dotfiles/tty/bashrc ~/.bashrc 
-  systemctl enable docker.service
-  # portainer
-  # .profile here for non graphic
-  usermod -G docker $user
-fi
-
-
-scope_graph='workstation home'
-if [[ $scope == *"scope_server"* ]]; then
-  # different .profile from here 
-  pacman -S --noconfirm xorg xorg-xinit xterm
-  yaourt -S i3-gaps 
-  cp /home/$user/Dotfiles/profile /home/$user/.profile
-  chmod 755 /home/$user/.profile
-  cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
-  cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
-fi
-
-
-if [ $scope = "home" ]; then
-    pacman -S steam
-    yaourt -S dropbox steam-fonts multimc5 openspades leagueoflegends glxosd
-fi
+pacman -S -noconfirm docker
+cp ~/Dotfiles/tty/bashrc ~/.bashrc 
+systemctl enable docker.service
+# portainer
+# .profile here for non graphic
+usermod -G docker $user
+# different .profile from here 
+pacman -S --noconfirm xorg xorg-xinit xterm
+yaourt -S i3-gaps 
+cp /home/$user/Dotfiles/profile /home/$user/.profile
+chmod 755 /home/$user/.profile
+cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
+cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
+pacman -S steam
+yaourt -S dropbox steam-fonts multimc5 openspades leagueoflegends glxosd
 
 echo $host > /etc/hostname
 pacman -Syu
-# rm -r /home/$user/DotFiles
 exit
 EOF
 umount -r /mnt
 reboot
 
+############################
+# TODO 
+############################
+#github and ranger stuff 
+# replace yaourt by su command
+# download repos 
+# install dotfiles 
+# remove dotfiles 
+# forward scope or hook instance install script somewhere 
+# install R properly 
+############################
