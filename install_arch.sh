@@ -126,8 +126,8 @@ EDITFILES=0" > /home/admin/.yaourtrc
 
 
 pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
-pip install youtube_dl==2017.07.30.1
-pip3 install greenlet==0.4.10
+#pip install youtube_dl==2017.07.30.1
+#pip3 install greenlet==0.4.10
 
 su -c "
 cd /tmp
@@ -143,7 +143,7 @@ cd /tmp
 git clone https://aur.archlinux.org/mingetty.git 
 cd mingetty 
 yes | makepkg -si 
-yaourt -Sy polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits dropbox steam-fonts multimc5 openspades # leagueoflegends glxosd dofus 
+yaourt -Sy polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits dropbox steam-fonts multimc5 openspades i3lock-fancy-git # leagueoflegends glxosd dofus 
  " - admin
 
 userdel -r admin
@@ -194,4 +194,6 @@ reboot
 # Potentially add t he following:
 # arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
 # jupyter labextension install @jupyterlab/google-drive
+# scope, make add onto a list including empty lines and comment. Then asking if need editing. Grep the final result and then pacman and yaourt 
+# special prompt for docker and images to download
 ############################
