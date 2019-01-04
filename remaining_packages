@@ -1,705 +1,703 @@
-extra/intltool
-extra/perl-xml-parser
-core/ppp
-community/xl2tpd
-local/js
-local/steam-fonts
-community/i3lock
+# extra/intltool
+perl-xml-parser
+# ppp
+- local/steam-fonts
+-i3lock
 extra/libraqm
-local/i3lock-fancy-git
-extra/glew
-community/ttf-ubuntu-font-family
-community/rhash
-extra/iniparser
-local/cava
-local/tremc-git
-local/glxosd
-community/icoutils
-local/nerd-fonts-complete
-local/haskell-semigroups
-local/ncmatrix
-community/cmus
-extra/libdiscid
-local/polybar-git
-local/gcc6-libs
-local/gcc6
-community/http-parser
-community/xbindkeys
-multilib/lib32-lcms2
-multilib/lib32-libice
-multilib/lib32-libsm
-multilib/lib32-libtiff
-multilib/lib32-libusb
-multilib/lib32-libxcursor
-multilib/lib32-libxi
-multilib/lib32-libxrandr
-multilib/lib32-libxrender
-multilib/lib32-giflib
-multilib/lib32-gmp
-multilib/lib32-libtasn1
-multilib/lib32-nettle
-multilib/lib32-flac
-multilib/lib32-libasyncns
-multilib/lib32-libltdl
-multilib/lib32-libogg
-multilib/lib32-libsndfile
-multilib/lib32-libvorbis
-multilib/lib32-libxslt
-multilib/lib32-libxtst
-multilib/lib32-mpg123
-multilib/lib32-ocl-icd
-extra/ocl-icd
-multilib/lib32-gdk-pixbuf2
-multilib/lib32-libcroco
-multilib/lib32-libcups
-multilib/lib32-libgudev
-multilib/lib32-libthai
-multilib/lib32-pixman
-extra/ijs
-multilib/lib32-libcanberra
-multilib/lib32-libproxy
-multilib/lib32-libunwind
-multilib/lib32-libxv
-multilib/lib32-orc
-multilib/lib32-rest
-extra/bc
-extra/sdl
-extra/sdl_net
-extra/sdl_sound
-extra/smpeg
-local/glxgears
-community/fish
-community/libaec
-community/libfreexl
-multilib/lib32-sdl
-local/unified-remote-server
-local/udunits
-community/jq
-community/ninja
-local/openspades
-local/radeontop
-extra/xclip
-community/xdotool
-community/perl-file-remove
-extra/libunicodenames
-extra/opencl-headers
-local/ympd-git
-extra/java-jline
-core/dosfstools
-local/lcms
-extra/libspnav
-community/tinyxml
-community/yaml-cpp
-local/quicklisp
-community/libx86
-local/uswsusp-git
-community/calcurse
-local/todotxt-git
-community/arduino-builder
-community/arduino-ctags
-community/arduino
-local/dutree
-extra/nmap
-local/inxi
-community/libtermkey
-community/luajit
-community/unibilium
-extra/ffnvcodec-headers
-extra/nasm
-community/sqlitebrowser
-extra/exiv2
-extra/libwmf
-extra/mypaint-brushes
-extra/pygtk
-local/ocaml-zarith
-local/ocaml-cryptokit
-local/ocaml-curl
-community/cppo
-local/ocaml-extlib
-extra/ocaml-result
-extra/ocaml-topkg
-local/ocaml-xmlm
-local/ocaml-pcre
-local/ocamlnet
-local/gapi-ocaml
-local/ocaml-ounit
-local/ocaml-sqlite3
-local/camlidl
-local/ocamlfuse
-local/google-drive-ocamlfuse
-community/shntool
-extra/w3m
-extra/libgdiplus
-community/gtk-sharp-3
-local/jdk
-local/htop-vim-git
-extra/cblas
-extra/openjpeg
-extra/glu
-extra/jemalloc
-extra/c-ares
-extra/cfitsio
-community/cuetools
-extra/liblqr
-extra/mozilla-common
-community/libgeotiff
-extra/libspiro
-extra/metis
-community/gendesk
-community/grc
-community/haskell-mmorph
-community/i3status
-extra/ladspa
-core/wireless_tools
-multilib/lib32-colord
-multilib/lib32-freetype2
-multilib/lib32-libdatrie
-multilib/lib32-libepoxy
-multilib/lib32-libxcomposite
-multilib/lib32-libxft
-multilib/lib32-libxmu
-multilib/lib32-libxt
-extra/libcue
-extra/libglade
-extra/libmng
-community/libmupdf
-extra/libmypaint
-community/libvterm
-extra/libxkbui
-core/mlocate
-local/pcmciautils
-extra/wget
-extra/xorg-xclock
-multilib/zsnes
-extra/hwloc
-community/pacutils
-community/pcurses
-extra/cups
-extra/libde265
-extra/libheif
-community/xsel
-community/aspcud
-multilib/lib32-libgusb
-archlinuxfr/package-query
-extra/freeglut
-extra/portmidi
-extra/sdl_image
-extra/sdl_mixer
-extra/sdl_ttf
-extra/apr
-extra/doxygen
-extra/serf
-extra/dejagnu
-extra/expect
-extra/libart-lgpl
-local/peco
-extra/p7zip
-extra/libxres
-community/notify-osd
-local/rofi-greenclip
-local/acestream-engine
-community/pv
-local/oni
-extra/tree
-extra/apr-util
-community/arpack
-extra/suitesparse
-multilib/lib32-libpulse
-community/neovim
-extra/screen
-extra/cyrus-sasl
-core/dialog
-extra/gmime
-local/davmail
-community/offlineimap
-community/task
-local/urlview
-community/perl-json
-community/tre
-core/cronie
-community/ruby-diff-lcs
-community/ruby-rdoc
-community/ruby-rspec-core
-community/ruby-rspec-expectations
-community/ruby-rspec-support
-community/lolcat
-community/ruby-manpages
-community/ruby-paint
-community/ruby-rainbow
-community/ruby-rspec
-community/ruby-rspec-mocks
-community/ruby-term-ansicolor
-community/ruby-tins
-community/ruby-trollop
-extra/libpeas
-local/astroid
-community/notmuch-mutt
-community/perl-data-optlist
-community/perl-devel-globaldestruction
-extra/perl-digest-hmac
-extra/perl-digest-sha1
-community/perl-io-stringy
-community/perl-mail-box
-community/perl-mail-message
-extra/perl-mime-types
-community/perl-object-realize-later
-community/perl-params-util
-extra/perl-string-shellquote
-community/perl-sub-exporter
-community/perl-sub-exporter-progressive
-community/perl-sub-install
-community/perl-term-readline-gnu
-community/perl-user-identity
-extra/ctags
-local/ttf-material-icons
-local/ttf-weather-icons
-local/tasksh
-extra/qwt
-extra/farstream
-extra/libnice
-community/purple-skypeweb
-community/avrdude
-community/libftdi
-extra/libusb-compat
-community/avr-binutils
-community/avr-gcc
-community/dfu-util
-community/arm-none-eabi-binutils
-community/arm-none-eabi-gcc
-community/avr-libc
-local/dfu-programmer
-community/npm
-extra/ilmbase
-community/hdf5
-extra/openexr
-extra/babl
-extra/intel-tbb
-community/opencolorio
-community/openimageio
-community/ptex
-community/blosc
-community/opensubdiv
-community/log4cplus
-extra/boost
-community/clingo
-community/confuse
-extra/qpdf
-extra/libmagick
-extra/imagemagick
-extra/liblouis
-extra/cups-filters
-community/dosbox
-extra/ocaml
-extra/ocaml-compiler-libs
-community/ocaml-findlib
-community/elinks
-core/libidn
-extra/libgadu
-extra/protobuf
-extra/protobuf-c
-extra/finch
-extra/libpurple
-extra/firefox
-extra/flashplugin
-extra/fontforge
-extra/fuse-common
-extra/fuse2
-extra/fuse3
-community/netcdf
-extra/libmariadbclient
-extra/postgresql-libs
-extra/lensfun
-community/libgexiv2
-extra/libraw
-extra/gegl
-extra/ghostscript
-extra/gsfonts
-extra/pygobject2-devel
-extra/gimp
-extra/glade
-extra/glib-perl
-extra/glpk
-community/go
-extra/gobject-introspection
-extra/gobject-introspection-runtime
-extra/gsasl
-community/haskell-base-orphans
-community/haskell-math-functions
-community/haskell-mwc-random
-community/haskell-resourcet
-community/haskell-unliftio-core
-community/haskell-lifted-base
-community/haskell-monad-control
-community/haskell-transformers-base
-community/igraph
-extra/openmpi
-extra/jre8-openjdk-headless
-extra/java-rhino
-extra/jre10-openjdk-headless
-extra/jre8-openjdk
-extra/jdk8-openjdk
-multilib/lib32-at-spi2-core
-multilib/lib32-atk
-multilib/lib32-at-spi2-atk
-multilib/lib32-fontconfig
-multilib/lib32-harfbuzz
-multilib/lib32-libpng
-multilib/lib32-cairo
-multilib/lib32-dconf
-multilib/lib32-fribidi
-multilib/lib32-glib-networking
-multilib/lib32-gnutls
-multilib/lib32-gst-plugins-base-libs
-multilib/lib32-gstreamer
-multilib/lib32-libidn
-multilib/lib32-p11-kit
-multilib/lib32-json-glib
-multilib/lib32-libjpeg-turbo
-multilib/lib32-libxinerama
-multilib/lib32-libxkbcommon
-multilib/lib32-pango
-multilib/lib32-tdb
-multilib/lib32-libidn2
-multilib/lib32-libpsl
-multilib/lib32-libunistring
-multilib/lib32-gtk3
-multilib/lib32-libva
-multilib/lib32-openal
-multilib/lib32-v4l-utils
-multilib/lib32-vulkan-icd-loader
-community/libsass
-community/libutf8proc
-extra/libwnck3
-community/cabextract
-extra/lynx
-extra/pygobject-devel
-extra/mariadb-clients
-extra/mono
-community/msgpack-c
-community/notmuch-runtime
-extra/xapian-core
-community/kyotocabinet
-community/neomutt
-community/nodejs
-community/node-gyp
-community/semver
-community/notmuch
-community/ocaml-biniou
-community/ocaml-easy-format
-community/ocaml-yojson
-extra/bubblewrap
-extra/ocamlbuild
-community/opam
-community/opusfile
-community/perl-curses
-extra/perl-encode-locale
-community/perl-extutils-config
-community/perl-extutils-helpers
-community/perl-extutils-installpaths
-extra/perl-file-listing
-extra/perl-html-parser
-extra/perl-html-tagset
-extra/perl-http-date
-extra/perl-http-cookies
-extra/perl-http-daemon
-extra/perl-http-message
-extra/perl-http-negotiate
-extra/perl-inc-latest
-extra/perl-io-html
-extra/perl-libwww
-extra/perl-lwp-mediatypes
-extra/perl-module-build
-community/perl-module-build-tiny
-community/perl-module-install
-community/perl-module-scandeps
-extra/perl-net-http
-community/perl-par-dist
-community/perl-parse-yapp
-community/perl-test-requires
-community/perl-text-charwidth
-extra/perl-try-tiny
-extra/perl-uri
-extra/perl-www-robotrules
-community/perl-yaml-tiny
-community/python-eyed3
-community/python-igraph
-community/python2-apsw
-community/python2-pillow
-community/python2-typing
-community/python2-xlib
-extra/qt5-xmlpatterns
-community/rust
-extra/samba
-extra/sip
-community/sshfs
-extra/subversion
-community/alembic
-community/opencollada
-community/openvdb
-community/blender
-community/dune
-core/elfutils
-community/haskell-conduit
-community/haskell-foundation
-community/haskell-mono-traversable
-community/haskell-yaml
-multilib/lib32-librsvg
-multilib/lib32-libsoup
-extra/libxnvctrl
-community/lutris
-community/marked
-extra/msmtp
-extra/ntfs-3g
-extra/sbcl
-local/nodejs-terminalizer
-extra/graphviz
-extra/gts
-extra/netpbm
-local/mgetty
-community/perl-data-dump
-extra/perl-io-socket-ssl
-extra/perl-lwp-protocol-https
-extra/perl-net-ssleay
-community/youtube-viewer
-multilib/lib32-acl
-multilib/lib32-gettext
-multilib/lib32-glu
-multilib/lib32-libnl
-multilib/lib32-libpcap
-multilib/wine-staging
-community/newsboat
-community/stfl
-community/ncdu
-extra/mariadb
-extra/libzip
-community/tt-rss
-extra/apache
-extra/compiler-rt
-extra/clang
-community/libspatialite
-extra/xerces-c
-community/gdal
-multilib/lib32-sqlite
-extra/numactl
-community/openshadinglanguage
-extra/qt5-tools
-extra/unrar
-extra/php
-extra/php-apache
-core/bridge-utils
-community/docker
-community/rclone
-community/mps-youtube
-community/python-pafy
-community/sdcv
-core/btrfs-progs
-extra/cdparanoia
-core/dmraid
-extra/gptfdisk
-extra/graphene
-extra/gst-plugins-base
-extra/libatasmart
-extra/libblockdev
-extra/libbytesize
-extra/libmtp
-extra/libmusicbrainz5
-extra/libvisual
-extra/media-player-info
-extra/ndctl
-extra/qt5-multimedia
-extra/udisks2
-extra/volume_key
-community/cantata
-community/lxappearance
-community/numix-gtk-theme
-local/numix-icon-theme-git
-local/numix-circle-icon-theme-git
-community/libfm
-community/libfm-extra
-community/libfm-gtk2
-community/lxmenu-data
-community/menu-cache
-community/pcmanfm
-extra/gsl
-extra/gtkspell
-extra/libmagick6
-extra/ttf-dejavu
-extra/inkscape
-extra/qt4
-local/automoc4
-local/oxygen-cursors-extra
-community/android-tools
-local/mobydroid
-extra/mobile-broadband-provider-info
-extra/nm-connection-editor
-core/rpcbind
-community/surf
-extra/jre10-openjdk
-community/youtube-dl
-extra/docbook-xml
-extra/swig
-community/asciidoc
-extra/docbook-xsl
-local/tmsu
-extra/qt5-script
-extra/qt5-sensors
-extra/qt5-webkit
-local/qt5-quick1
-local/feedthemonkey
-local/adbfs-rootless-git
-community/lxqt-build-tools
-local/compton-conf
-community/tig
-extra/gnome-online-accounts
-extra/source-highlight
-extra/gnome-keyring
-extra/gtk-doc
-extra/libgee
-extra/vala
-community/addinclude
-local/ptask
-community/ruby-multi_json
-local/ruby-concurrent-ruby
-local/ruby-i18n
-local/ruby-activesupport-3
-local/ruby-json-1
-local/ruby-parseconfig-1
-community/ruby-rack
-local/ruby-rack-flash3
-local/ruby-rinku
-community/ruby-rack-protection
-community/ruby-tilt
-local/ruby-mustermann
-local/ruby-sinatra
-local/ruby-minitest
-local/ruby-tzinfo
-local/ruby-activesupport
-local/ruby-simple-navigation
-local/ruby-sinatra-simple-navigation
-local/ruby-vegas
-local/ruby-blockenspiel
-local/ruby-versionomy
-local/ruby-taskwarrior-web
-extra/scons
-local/gambatte-qt
-local/gambatte-sdl
-local/xidel
-community/granite
-extra/meson
-local/copypastegrab-git
-local/nnn-git
-community/dbeaver
-local/fff-git
-local/rclone-browser
-extra/libgnome-keyring
-extra/libgtop
-extra/ntp
-extra/geoip
-extra/geoip-database
-extra/nginx
-community/ufw
-community/alacritty
-community/grsync
-local/musnify-mpd
-community/exfat-utils
-core/libidn
-extra/wget
-extra/nmap
-extra/bitlbee
-extra/irssi
-community/xl2tpd
-local/openswan
-community/http-parser
-community/node-gyp
-local/nodejs-terminalizer
-community/dmenu
-extra/w3m
-community/sshfs
-extra/xorg-xclock
-extra/glew
-extra/glu
-community/newsboat
-community/stfl
-extra/iniparser
-extra/gsasl
-extra/msmtp
-community/semver
-extra/mozilla-common
-local/fff-git
-community/autossh
-community/grsync
-extra/libmng
-community/ctemplate
-extra/jre10-openjdk
-extra/jre10-openjdk-headless
-local/davmail
-extra/liblqr
-extra/libraqm
-extra/gmime
-community/kyotocabinet
-community/neomutt
-local/googler
-local/urlview
-community/python2-argparse
-community/python2-pillow
-extra/protobuf
-community/python2-axolotl
-community/python2-axolotl-curve25519
-extra/jemalloc
-community/libtermkey
-community/libvterm
-community/msgpack-c
-community/unibilium
-community/python-greenlet
-community/offlineimap
-community/perl-data-optlist
-community/perl-devel-globaldestruction
-extra/perl-digest-hmac
-extra/perl-digest-sha1
-community/perl-io-stringy
-extra/perl-mime-types
-community/perl-object-realize-later
-community/perl-params-util
-community/perl-sub-exporter
-community/perl-sub-exporter-progressive
-community/perl-sub-install
-community/perl-term-readline-gnu
-extra/perl-uri
-community/perl-user-identity
-local/glxgears
-community/rustup
-local/effitask
-local/todotxt
-community/python-click
-community/python-gevent
-extra/c-ares
-extra/firefox
-extra/fuse-common
-extra/fuse3
-extra/imagemagick
-extra/libmagick
-community/jq
-community/luajit
-community/neovim
-community/nodejs
-community/notmuch-mutt
-community/notmuch-runtime
-community/perl-file-remove
-community/perl-mail-box
-community/perl-mail-message
-extra/perl-string-shellquote
-extra/xapian-core
-community/npm
-community/perl-parse-yapp
-core/ppp
-community/python-neovim
-community/python2-dateutil
-community/python2-enum34
-extra/qt4
-extra/samba
-extra/sbcl
-community/task
-extra/tree
-community/virtualbox-guest-modules-arch
-community/virtualbox-guest-utils
-community/weechat
+-i3lock-fancy-git
+* extra/glew
+* community/ttf-ubuntu-font-family
+* community/rhash
+* extra/iniparser
+* local/cava
+* local/tremc-git
+* local/glxosd
+* community/icoutils
+* local/nerd-fonts-complete
+* local/haskell-semigroups
+* local/ncmatrix
+* community/cmus
+* extra/libdiscid
+* local/polybar-git
+* local/gcc6-libs
+* local/gcc6
+* community/http-parser
+* community/xbindkeys
+* multilib/lib32-lcms2
+* multilib/lib32-libice
+* multilib/lib32-libsm
+* multilib/lib32-libtiff
+* multilib/lib32-libusb
+* multilib/lib32-libxcursor
+* multilib/lib32-libxi
+* multilib/lib32-libxrandr
+* multilib/lib32-libxrender
+* multilib/lib32-giflib
+* multilib/lib32-gmp
+* multilib/lib32-libtasn1
+* multilib/lib32-nettle
+* multilib/lib32-flac
+* multilib/lib32-libasyncns
+* multilib/lib32-libltdl
+* multilib/lib32-libogg
+* multilib/lib32-libsndfile
+* multilib/lib32-libvorbis
+* multilib/lib32-libxslt
+* multilib/lib32-libxtst
+* multilib/lib32-mpg123
+* multilib/lib32-ocl-icd
+* extra/ocl-icd
+* multilib/lib32-gdk-pixbuf2
+* multilib/lib32-libcroco
+* multilib/lib32-libcups
+* multilib/lib32-libgudev
+* multilib/lib32-libthai
+* multilib/lib32-pixman
+* extra/ijs
+* multilib/lib32-libcanberra
+* multilib/lib32-libproxy
+* multilib/lib32-libunwind
+* multilib/lib32-libxv
+* multilib/lib32-orc
+* multilib/lib32-rest
+* extra/bc
+* extra/sdl
+* extra/sdl_net
+* extra/sdl_sound
+* extra/smpeg
+* local/glxgears
+* community/fish
+* community/libaec
+* community/libfreexl
+* multilib/lib32-sdl
+* local/unified-remote-server
+* local/udunits
+* community/jq
+* community/ninja
+* local/openspades
+* local/radeontop
+* extra/xclip
+* community/xdotool
+* community/perl-file-remove
+* extra/libunicodenames
+* extra/opencl-headers
+* local/ympd-git
+* extra/java-jline
+* core/dosfstools
+* local/lcms
+* extra/libspnav
+* community/tinyxml
+* community/yaml-cpp
+* local/quicklisp
+* community/libx86
+* local/uswsusp-git
+* community/calcurse
+* local/todotxt-git
+* community/arduino-builder
+* community/arduino-ctags
+* community/arduino
+* local/dutree
+* extra/nmap
+* local/inxi
+* community/libtermkey
+* community/luajit
+* community/unibilium
+* extra/ffnvcodec-headers
+* extra/nasm
+* community/sqlitebrowser
+* extra/exiv2
+* extra/libwmf
+* extra/mypaint-brushes
+* extra/pygtk
+* local/ocaml-zarith
+* local/ocaml-cryptokit
+* local/ocaml-curl
+* community/cppo
+* local/ocaml-extlib
+* extra/ocaml-result
+* extra/ocaml-topkg
+* local/ocaml-xmlm
+* local/ocaml-pcre
+* local/ocamlnet
+* local/gapi-ocaml
+* local/ocaml-ounit
+* local/ocaml-sqlite3
+* local/camlidl
+* local/ocamlfuse
+* local/google-drive-ocamlfuse
+* community/shntool
+* extra/w3m
+* extra/libgdiplus
+* community/gtk-sharp-3
+* local/jdk
+* local/htop-vim-git
+* extra/cblas
+* extra/openjpeg
+* extra/glu
+* extra/jemalloc
+* extra/c-ares
+* extra/cfitsio
+* community/cuetools
+* extra/liblqr
+* extra/mozilla-common
+* community/libgeotiff
+* extra/libspiro
+* extra/metis
+* community/gendesk
+* community/grc
+* community/haskell-mmorph
+* community/i3status
+* extra/ladspa
+* core/wireless_tools
+* multilib/lib32-colord
+* multilib/lib32-freetype2
+* multilib/lib32-libdatrie
+* multilib/lib32-libepoxy
+* multilib/lib32-libxcomposite
+* multilib/lib32-libxft
+* multilib/lib32-libxmu
+* multilib/lib32-libxt
+* extra/libcue
+* extra/libglade
+* extra/libmng
+* community/libmupdf
+* extra/libmypaint
+* community/libvterm
+* extra/libxkbui
+* core/mlocate
+* local/pcmciautils
+* extra/wget
+* extra/xorg-xclock
+* multilib/zsnes
+* extra/hwloc
+* community/pacutils
+* community/pcurses
+* extra/cups
+* extra/libde265
+* extra/libheif
+* community/xsel
+* community/aspcud
+* multilib/lib32-libgusb
+* archlinuxfr/package-query
+* extra/freeglut
+* extra/portmidi
+* extra/sdl_image
+* extra/sdl_mixer
+* extra/sdl_ttf
+* extra/apr
+* extra/doxygen
+* extra/serf
+* extra/dejagnu
+* extra/expect
+* extra/libart-lgpl
+* local/peco
+* extra/p7zip
+* extra/libxres
+* community/notify-osd
+* local/rofi-greenclip
+* local/acestream-engine
+* community/pv
+* local/oni
+* extra/tree
+* extra/apr-util
+* community/arpack
+* extra/suitesparse
+* multilib/lib32-libpulse
+* community/neovim
+* extra/screen
+* extra/cyrus-sasl
+* core/dialog
+* extra/gmime
+* local/davmail
+* community/offlineimap
+* community/task
+* local/urlview
+* community/perl-json
+* community/tre
+* core/cronie
+* community/ruby-diff-lcs
+* community/ruby-rdoc
+* community/ruby-rspec-core
+* community/ruby-rspec-expectations
+* community/ruby-rspec-support
+* community/lolcat
+* community/ruby-manpages
+* community/ruby-paint
+* community/ruby-rainbow
+* community/ruby-rspec
+* community/ruby-rspec-mocks
+* community/ruby-term-ansicolor
+* community/ruby-tins
+* community/ruby-trollop
+* extra/libpeas
+* local/astroid
+* community/notmuch-mutt
+* community/perl-data-optlist
+* community/perl-devel-globaldestruction
+* extra/perl-digest-hmac
+* extra/perl-digest-sha1
+* community/perl-io-stringy
+* community/perl-mail-box
+* community/perl-mail-message
+* extra/perl-mime-types
+* community/perl-object-realize-later
+* community/perl-params-util
+* extra/perl-string-shellquote
+* community/perl-sub-exporter
+* community/perl-sub-exporter-progressive
+* community/perl-sub-install
+* community/perl-term-readline-gnu
+* community/perl-user-identity
+* extra/ctags
+* local/ttf-material-icons
+* local/ttf-weather-icons
+* local/tasksh
+* extra/qwt
+* extra/farstream
+* extra/libnice
+* community/purple-skypeweb
+* community/avrdude
+* community/libftdi
+* extra/libusb-compat
+* community/avr-binutils
+* community/avr-gcc
+* community/dfu-util
+* community/arm-none-eabi-binutils
+* community/arm-none-eabi-gcc
+* community/avr-libc
+* local/dfu-programmer
+* community/npm
+* extra/ilmbase
+* community/hdf5
+* extra/openexr
+* extra/babl
+* extra/intel-tbb
+* community/opencolorio
+* community/openimageio
+* community/ptex
+* community/blosc
+* community/opensubdiv
+* community/log4cplus
+* extra/boost
+* community/clingo
+* community/confuse
+* extra/qpdf
+* extra/libmagick
+* extra/imagemagick
+* extra/liblouis
+* extra/cups-filters
+* community/dosbox
+* extra/ocaml
+* extra/ocaml-compiler-libs
+* community/ocaml-findlib
+* community/elinks
+* core/libidn
+* extra/libgadu
+* extra/protobuf
+* extra/protobuf-c
+* extra/finch
+* extra/libpurple
+* extra/firefox
+* extra/flashplugin
+* extra/fontforge
+* extra/fuse-common
+* extra/fuse2
+* extra/fuse3
+* community/netcdf
+* extra/libmariadbclient
+* extra/postgresql-libs
+* extra/lensfun
+* community/libgexiv2
+* extra/libraw
+* extra/gegl
+* extra/ghostscript
+* extra/gsfonts
+* extra/pygobject2-devel
+* extra/gimp
+* extra/glade
+* extra/glib-perl
+* extra/glpk
+* community/go
+* extra/gobject-introspection
+* extra/gobject-introspection-runtime
+* extra/gsasl
+* community/haskell-base-orphans
+* community/haskell-math-functions
+* community/haskell-mwc-random
+* community/haskell-resourcet
+* community/haskell-unliftio-core
+* community/haskell-lifted-base
+* community/haskell-monad-control
+* community/haskell-transformers-base
+* community/igraph
+* extra/openmpi
+* extra/jre8-openjdk-headless
+* extra/java-rhino
+* extra/jre10-openjdk-headless
+* extra/jre8-openjdk
+* extra/jdk8-openjdk
+* multilib/lib32-at-spi2-core
+* multilib/lib32-atk
+* multilib/lib32-at-spi2-atk
+* multilib/lib32-fontconfig
+* multilib/lib32-harfbuzz
+* multilib/lib32-libpng
+* multilib/lib32-cairo
+* multilib/lib32-dconf
+* multilib/lib32-fribidi
+* multilib/lib32-glib-networking
+* multilib/lib32-gnutls
+* multilib/lib32-gst-plugins-base-libs
+* multilib/lib32-gstreamer
+* multilib/lib32-libidn
+* multilib/lib32-p11-kit
+* multilib/lib32-json-glib
+* multilib/lib32-libjpeg-turbo
+* multilib/lib32-libxinerama
+* multilib/lib32-libxkbcommon
+* multilib/lib32-pango
+* multilib/lib32-tdb
+* multilib/lib32-libidn2
+* multilib/lib32-libpsl
+* multilib/lib32-libunistring
+* multilib/lib32-gtk3
+* multilib/lib32-libva
+* multilib/lib32-openal
+* multilib/lib32-v4l-utils
+* multilib/lib32-vulkan-icd-loader
+* community/libsass
+* community/libutf8proc
+* extra/libwnck3
+* community/cabextract
+* extra/lynx
+* extra/pygobject-devel
+* extra/mariadb-clients
+* extra/mono
+* community/msgpack-c
+* community/notmuch-runtime
+* extra/xapian-core
+* community/kyotocabinet
+* community/neomutt
+* community/nodejs
+* community/node-gyp
+* community/semver
+* community/notmuch
+* community/ocaml-biniou
+* community/ocaml-easy-format
+* community/ocaml-yojson
+* extra/bubblewrap
+* extra/ocamlbuild
+* community/opam
+* community/opusfile
+* community/perl-curses
+* extra/perl-encode-locale
+* community/perl-extutils-config
+* community/perl-extutils-helpers
+* community/perl-extutils-installpaths
+* extra/perl-file-listing
+* extra/perl-html-parser
+* extra/perl-html-tagset
+* extra/perl-http-date
+* extra/perl-http-cookies
+* extra/perl-http-daemon
+* extra/perl-http-message
+* extra/perl-http-negotiate
+* extra/perl-inc-latest
+* extra/perl-io-html
+* extra/perl-libwww
+* extra/perl-lwp-mediatypes
+* extra/perl-module-build
+* community/perl-module-build-tiny
+* community/perl-module-install
+* community/perl-module-scandeps
+* extra/perl-net-http
+* community/perl-par-dist
+* community/perl-parse-yapp
+* community/perl-test-requires
+* community/perl-text-charwidth
+* extra/perl-try-tiny
+* extra/perl-uri
+* extra/perl-www-robotrules
+* community/perl-yaml-tiny
+* community/python-eyed3
+* community/python-igraph
+* community/python2-apsw
+* community/python2-pillow
+* community/python2-typing
+* community/python2-xlib
+* extra/qt5-xmlpatterns
+* community/rust
+* extra/samba
+* extra/sip
+* community/sshfs
+* extra/subversion
+* community/alembic
+* community/opencollada
+* community/openvdb
+* community/blender
+* community/dune
+* core/elfutils
+* community/haskell-conduit
+* community/haskell-foundation
+* community/haskell-mono-traversable
+* community/haskell-yaml
+* multilib/lib32-librsvg
+* multilib/lib32-libsoup
+* extra/libxnvctrl
+* community/lutris
+* community/marked
+* extra/msmtp
+* extra/ntfs-3g
+* extra/sbcl
+* local/nodejs-terminalizer
+* extra/graphviz
+* extra/gts
+* extra/netpbm
+* local/mgetty
+* community/perl-data-dump
+* extra/perl-io-socket-ssl
+* extra/perl-lwp-protocol-https
+* extra/perl-net-ssleay
+* community/youtube-viewer
+* multilib/lib32-acl
+* multilib/lib32-gettext
+* multilib/lib32-glu
+* multilib/lib32-libnl
+* multilib/lib32-libpcap
+* multilib/wine-staging
+* community/newsboat
+* community/stfl
+* community/ncdu
+* extra/mariadb
+* extra/libzip
+* community/tt-rss
+* extra/apache
+* extra/compiler-rt
+* extra/clang
+* community/libspatialite
+* extra/xerces-c
+* community/gdal
+* multilib/lib32-sqlite
+* extra/numactl
+* community/openshadinglanguage
+* extra/qt5-tools
+* extra/unrar
+* extra/php
+* extra/php-apache
+* core/bridge-utils
+* community/docker
+* community/rclone
+* community/mps-youtube
+* community/python-pafy
+* community/sdcv
+* core/btrfs-progs
+* extra/cdparanoia
+* core/dmraid
+* extra/gptfdisk
+* extra/graphene
+* extra/gst-plugins-base
+* extra/libatasmart
+* extra/libblockdev
+* extra/libbytesize
+* extra/libmtp
+* extra/libmusicbrainz5
+* extra/libvisual
+* extra/media-player-info
+* extra/ndctl
+* extra/qt5-multimedia
+* extra/udisks2
+* extra/volume_key
+* community/cantata
+* community/lxappearance
+* community/numix-gtk-theme
+* local/numix-icon-theme-git
+* local/numix-circle-icon-theme-git
+* community/libfm
+* community/libfm-extra
+* community/libfm-gtk2
+* community/lxmenu-data
+* community/menu-cache
+* community/pcmanfm
+* extra/gsl
+* extra/gtkspell
+* extra/libmagick6
+* extra/ttf-dejavu
+* extra/inkscape
+* extra/qt4
+* local/automoc4
+* local/oxygen-cursors-extra
+* community/android-tools
+* local/mobydroid
+* extra/mobile-broadband-provider-info
+* extra/nm-connection-editor
+* core/rpcbind
+* community/surf
+* extra/jre10-openjdk
+* community/youtube-dl
+* extra/docbook-xml
+* extra/swig
+* community/asciidoc
+* extra/docbook-xsl
+* local/tmsu
+* extra/qt5-script
+* extra/qt5-sensors
+* extra/qt5-webkit
+* local/qt5-quick1
+* local/feedthemonkey
+* local/adbfs-rootless-git
+* community/lxqt-build-tools
+* local/compton-conf
+* community/tig
+* extra/gnome-online-accounts
+* extra/source-highlight
+* extra/gnome-keyring
+* extra/gtk-doc
+* extra/libgee
+* extra/vala
+* community/addinclude
+* local/ptask
+* community/ruby-multi_json
+* local/ruby-concurrent-ruby
+* local/ruby-i18n
+* local/ruby-activesupport-3
+* local/ruby-json-1
+* local/ruby-parseconfig-1
+* community/ruby-rack
+* local/ruby-rack-flash3
+* local/ruby-rinku
+* community/ruby-rack-protection
+* community/ruby-tilt
+* local/ruby-mustermann
+* local/ruby-sinatra
+* local/ruby-minitest
+* local/ruby-tzinfo
+* local/ruby-activesupport
+* local/ruby-simple-navigation
+* local/ruby-sinatra-simple-navigation
+* local/ruby-vegas
+* local/ruby-blockenspiel
+* local/ruby-versionomy
+* local/ruby-taskwarrior-web
+* extra/scons
+* local/gambatte-qt
+* local/gambatte-sdl
+* local/xidel
+* community/granite
+* extra/meson
+* local/copypastegrab-git
+* local/nnn-git
+* community/dbeaver
+* local/fff-git
+* local/rclone-browser
+* extra/libgnome-keyring
+* extra/libgtop
+* extra/ntp
+* extra/geoip
+* extra/geoip-database
+* extra/nginx
+* community/ufw
+* community/alacritty
+* community/grsync
+* local/musnify-mpd
+* community/exfat-utils
+* core/libidn
+* extra/wget
+* extra/nmap
+* extra/bitlbee
+* extra/irssi
+* community/xl2tpd
+* local/openswan
+* community/http-parser
+* community/node-gyp
+* local/nodejs-terminalizer
+* community/dmenu
+* extra/w3m
+* community/sshfs
+* extra/xorg-xclock
+* extra/glew
+* extra/glu
+* community/newsboat
+* community/stfl
+* extra/iniparser
+* extra/gsasl
+* extra/msmtp
+* community/semver
+* extra/mozilla-common
+* local/fff-git
+* community/autossh
+* community/grsync
+* extra/libmng
+* community/ctemplate
+* extra/jre10-openjdk
+* extra/jre10-openjdk-headless
+* local/davmail
+* extra/liblqr
+* extra/libraqm
+* extra/gmime
+* community/kyotocabinet
+* community/neomutt
+* local/googler
+* local/urlview
+* community/python2-argparse
+* community/python2-pillow
+* extra/protobuf
+* community/python2-axolotl
+* community/python2-axolotl-curve25519
+* extra/jemalloc
+* community/libtermkey
+* community/libvterm
+* community/msgpack-c
+* community/unibilium
+* community/python-greenlet
+* community/offlineimap
+* community/perl-data-optlist
+* community/perl-devel-globaldestruction
+* extra/perl-digest-hmac
+* extra/perl-digest-sha1
+* community/perl-io-stringy
+* extra/perl-mime-types
+* community/perl-object-realize-later
+* community/perl-params-util
+* community/perl-sub-exporter
+* community/perl-sub-exporter-progressive
+* community/perl-sub-install
+* community/perl-term-readline-gnu
+* extra/perl-uri
+* community/perl-user-identity
+* local/glxgears
+* community/rustup
+* local/effitask
+* local/todotxt
+* community/python-click
+* community/python-gevent
+* extra/c-ares
+* extra/firefox
+* extra/fuse-common
+* extra/fuse3
+* extra/imagemagick
+* extra/libmagick
+* community/jq
+* community/luajit
+* community/neovim
+* community/nodejs
+* community/notmuch-mutt
+* community/notmuch-runtime
+* community/perl-file-remove
+* community/perl-mail-box
+* community/perl-mail-message
+* extra/perl-string-shellquote
+* extra/xapian-core
+* community/npm
+* community/perl-parse-yapp
+* # core/ppp
+* community/python-neovim
+* community/python2-dateutil
+* community/python2-enum34
+* extra/qt4
+* extra/samba
+* extra/sbcl
+* community/task
+* extra/tree
+* community/virtualbox-guest-modules-arch
+* community/virtualbox-guest-utils
+* community/weechat
