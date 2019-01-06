@@ -93,9 +93,7 @@ cat << EOF | arch-chroot /mnt /bin/bash
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 
-pacman -Sy --noconfirm --needed networkmanager git curl lm_sensors xorg xorg-xinit xterm python-pip tmux neofetch gcc-fortran rofi feh htop pulseaudio alsa-utils transmission-cli mpv mupdf dunst compton  gparted  pandoc texlive-most mutt beep scrot ncmpcpp mpd mpc tk proj geos qutebrowser ack  r libreoffice steam lib32-gconf
-
-# mariadb nerd-fonts-complet gdal zsnes cava wine 
+pacman -Sy --noconfirm --needed networkmanager git curl lm_sensors $list_pacman
 
 systemctl enable NetworkManager
 echo "en_US.UTF-8 UTF-8  " >> /etc/locale.gen
@@ -172,28 +170,3 @@ exit
 EOF
 umount -r /mnt
 reboot
-
-############################
-# TODO 
-############################
-# reboot if not argument otherwise plug in the instance's script here
-#github and ranger stuff 
-# replace yaourt by su command
-# download repos 
-# install dotfiles 
-# remove dotfiles 
-# forward scope or hook instance install script somewhere 
-# change to some dialog stuff especially for drive and scope selection 
-# install R properly 
-# would you like to run the script as is or have a chance to edit it firts ?
-# pacman -S -noconfirm docker
-# systemctl enable docker.service
-# # portainer
-# # .profile here for non graphic
-# usermod -G docker $user
-# Potentially add t he following:
-# arduino blender calcurse cups dosbox dosfstools dunst fish gimp glxosd google-drive-ocamlfuse htop-vim-git nmap noto-fonts-git npm ntfs-3g oni p7zip pacutils peco python-eyed3 python-igraph quicklisp radeontop rofi-greenclip rsync samba sbcl scrot sshfs tmsu todotxt-git tremc-git uswsusp-git w3m wget wine-staging xbindkeys xclip xdotool xsel ympd-git zsnes
-# jupyter labextension install @jupyterlab/google-drive
-# scope, make add onto a list including empty lines and comment. Then asking if need editing. Grep the final result and then pacman and yaourt 
-# special prompt for docker and images to download
-############################

@@ -3,6 +3,7 @@
 # flashplugin
 # gambatte: sdl qt or libretro
 # mobile-broadband-provider-info
+# adb and adbfs
 # package-query
 # pcmciautils
 # skype web stuff for finch
@@ -11,8 +12,10 @@
 - android-tools
 - arm-none-eabi-binutils
 - arm-none-eabi-gcc
+- vimpc
 - asciidoc
 - astroid
+- lolcat
 - autossh
 - avr-gcc
 - avr-libc
@@ -48,7 +51,6 @@
 - marked
 - mobydroid
 - mps-youtube
-- musnify-mpd
 - musnify-mpd
 - ncdu
 - ncmatrix
@@ -95,7 +97,6 @@
 - tig
 - tmsu
 - todotxt
-- todotxt
 - todotxt-machine-git
 - tremc
 - ttf-material-icons
@@ -112,7 +113,6 @@
 - youtube-dl
 - youtube-viewer
 - tt-rss
-- urlview
 arduino
 bc
 bitlbee
@@ -131,7 +131,6 @@ finch
 fish
 fontforge
 gimp
-gimp
 glade
 gnome-keyring
 go
@@ -143,7 +142,6 @@ irssi
 java-rhino
 jdk8-openjdk
 jre10-openjdk
-jre10-openjdk
 jre8-openjdk
 ladspa
 libart-lgpl
@@ -152,7 +150,6 @@ lynx
 mariadb
 mlocate
 mono
-msmtp
 msmtp
 nginx
 nmap
@@ -192,3 +189,48 @@ xdotool
 xorg-xclock
 xsel
 zsnes
+networkmanager git curl lm_sensors 
+xorg
+xorg-xinit
+xterm
+python-pip
+tmux
+neofetch
+gcc-fortran
+rofi
+feh
+pulseaudio
+alsa-utils
+transmission-cli
+mpv
+mupdf
+compton
+compton-conf
+gparted
+pandoc
+texlive-most
+mutt
+beep
+ncmpcpp
+mpd
+mpc
+tk
+proj
+geos
+qutebrowser
+ack
+lib32-gconf
+- polybar 
+- ncmatrix 
+- cli-visualizer 
+- i3-gaps 
+- zathura-pdf-poppler 
+- cool-retro-term 
+- unified-remote-server 
+- udunits 
+- steam-fonts 
+- multimc5 
+- openspades 
+- i3lock-fancy-git 
+# leagueoflegends-git 
+# dofus 
