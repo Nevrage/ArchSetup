@@ -11,6 +11,8 @@
 # weather-bar
 - android-tools
 - arm-none-eabi-binutils
+- moreutils
+- bash-pipes
 - arm-none-eabi-gcc
 - vimpc
 - asciidoc

@@ -37,6 +37,12 @@ also available: docker and vbox
 read scope
 clear
 
+curl https://raw.githubusercontent.com/Nevrage/ArchSetup/master/list_packages > list_packages
+# make some assumptiom here and comment stuff based on tags and scope
+# ask if the list of package should be further edited
+vim list_packages
+
+
 # Is that really useful ?
 export user
 export pw
@@ -87,13 +93,14 @@ mount $drive"4" /mnt/home
 pacstrap /mnt base base-devel vim ranger 
 genfstab -U /mnt >> /mnt/etc/fstab
 
+cp list_packages /mnt/
 
 cat << EOF | arch-chroot /mnt /bin/bash 
  
 echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 
-pacman -Sy --noconfirm --needed networkmanager git curl lm_sensors $list_pacman
+pacman -Sy --noconfirm --needed networkmanager git curl lm_sensors
 
 systemctl enable NetworkManager
 echo "en_US.UTF-8 UTF-8  " >> /etc/locale.gen
@@ -120,13 +127,6 @@ NOCONFIRM=1
 BUILD_NOCONFIRM=1
 EDITFILES=0" > /home/admin/.yaourtrc
 
-
-
-
-pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
-#pip install youtube_dl==2017.07.30.1
-#pip3 install greenlet==0.4.10
-
 su -c "
 cd /tmp
 git clone https://aur.archlinux.org/package-query.git
@@ -141,8 +141,14 @@ cd /tmp
 git clone https://aur.archlinux.org/mingetty.git 
 cd mingetty 
 yes | makepkg -si 
-yaourt -Sy polybar bash-pipes ncmatrix cli-visualizer i3-gaps zathura-pdf-poppler cool-retro-term unified-remote-server jq-git udunits dropbox steam-fonts multimc5 openspades i3lock-fancy-git # leagueoflegends glxosd dofus 
+yaourt -Sy moreutils
  " - admin
+
+pacman -S --noconfirm $(cat /list_packages | grep -v "^-" | grep -v "^#" |  sed 's/$/ /' | tr -d "\n") 
+su -c "yaourt -S $(cat list_packages | grep  "^-" | grep -v "^#" |  sed 's/$/ /' | sed '/./s/^-//g' | tr -d "\n")"
+rm /list_packages
+
+pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
 
 userdel -r admin
 
