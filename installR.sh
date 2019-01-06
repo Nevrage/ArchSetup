@@ -13,6 +13,5 @@ devtools::install_github("jalvesaq/colorout")
 install.packages("sf")
 EOF
 
-# universal solution and move this to future scripts folder 
-    ## need to figure out the nested EOF in bash first 
+# How to do nested EOF in bash
 # what about Rprofile and libpaths
