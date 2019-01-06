@@ -145,7 +145,7 @@ yaourt -Sy moreutils
  " - admin
 
 pacman -S --noconfirm $(cat /list_packages | grep -v "^-" | grep -v "^#" |  sed 's/$/ /' | tr -d "\n") 
-su -c "yaourt -S $(cat list_packages | grep  "^-" | grep -v "^#" |  sed 's/$/ /' | sed '/./s/^-//g' | tr -d "\n")"
+su -c "yaourt -S $(cat list_packages | grep  "^-" | grep -v "^#" |  sed 's/$/ /' | sed '/./s/^-//g' | tr -d "\n")" - admin
 rm /list_packages
 
 pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
@@ -158,20 +158,33 @@ useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner 
 echo "$user|$pw" | chpasswd
 echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --noclear %I $TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf 
 
-cd /home/$user 
+$HOME=/home/$user
+cd 
 git clone https://github.com/Nevrage/Dotfiles.git
-mkdir -p /home/$user/.vim/bundle/
-git clone https://github.com/VundleVim/Vundle.vim.git /home/$user/.vim/bundle/Vundle.vim
-cp /home/$user/Dotfiles/tty/vimrc /home/$user/.vimrc
-# vim +PluginInstall +qall
-cp /home/$user/Dotfiles/tty/bashrc /home/$user/.bashrc 
-cp /home/$user/Dotfiles/tty/profile /home/$user/.profile
-chmod 755 /home/$user/.profile
-cp /home/$user/Dotfiles/desktopSpace/xinitrc /home/$user/.xinitrc
-cp /home/$user/Dotfiles/desktopSpace/i3/* /home/$user/i3/
+mkdir -p ~/.vim/bundle/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cd Dotfiles
+bash import.sh
+cd ..
+chmod 755 ~/.profile
+
+ln -s ../.vim ~/.config/nvim
+ln -s ../.vimrc ~/.vim/init.vim
+rm /usr/bin/vi
+rm /usr/bin/vim
+ls -s /usr/bin/nvim /usr/bin/vi
+ls -s /usr/bin/nvim /usr/bin/vim
+
+
+rm -r Dotfiles
+
+su -c"
+wal --theme random
+vim +PluginInstall +qall
+## install R here?" - $user
 
 echo $host > /etc/hostname
-pacman -Syu
+pacman -Syu --noconfirm
 exit
 EOF
 umount -r /mnt

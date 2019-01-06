@@ -1,12 +1,18 @@
 # ArchSetup
 
 # To Do:
-* install the dotfiles from their repo
-* remove dotfiles at the end 
+* link neovim as vim
+* source the tmux config
 * R and python packages
-* apply the numix and the cursor
+* depersonalize and ask for password or at least do the switch with the variable
 
-# Less immediate:
+# Why
+
+# What
+
+# Installation process
+
+## Less immediate:
 * comeup with a tag, scope and assumption system
 * comment a bunch of uncertain packages and see which ones are still installed
 * services
@@ -15,7 +21,7 @@
 * bash2rc for Desk scope
 * ask for passwords or have the instance script call the distro install one (password for email and transmission, sftp etc)
 
-# longer term
+## longer term
 * find a way to hide more questions: (should we exit chroot or reboot or not etc)
 * rename project to encompass more than a single distribution
 * arduino packages

@@ -14,6 +14,7 @@
 - moreutils
 - bash-pipes
 - arm-none-eabi-gcc
+- stardict
 - vimpc
 - asciidoc
 - astroid
@@ -236,3 +237,5 @@ lib32-gconf
 - i3lock-fancy-git 
 # leagueoflegends-git 
 # dofus 
+- grub-customizer
+- grub-themes-solarized-dark-materialized
