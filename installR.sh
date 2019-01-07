@@ -1,5 +1,5 @@
-R <<EOF
-options("http://cran.us.r-project.org")
+R --no-save <<EOF
+options(repos= "http://cran.us.r-project.org")
 install.packages("tidyverse")
 install.packages("knitr")
 install.packages("rmarkdown")
