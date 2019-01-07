@@ -52,9 +52,12 @@ export scope
 
 
 wipefs -a $drive 
+# dd if=/dev/zero of=$drive bs=4096
+
 ## alternatively could try the following: parted rm /dev/sda1, wipefs -a -n 5 or nothing, dd, scrub 
 
 timedatectl set-ntp true
+
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk $drive
   o # clear the in memory partition table
   n # new partition
@@ -64,17 +67,17 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk $drive
   +100M # 100 MB boot parttion
   n # new partition
   p # primary partition
-  2 # partion number 2
+    # partion number 2
     # default, start immediately after preceding partition
   +12G # SWAP partition
   n # new partition
   p # primary partition
-  3 # parition number 3
+    # parition number 3
     # default - start at the beginning of disk
   +25G # root partition
   n # new partition 
   p # primary partition 
-  4 # home partition 
+    # home partition 
     # default start 
     # until the end
   w # write the partition table
@@ -83,6 +86,7 @@ EOF
 mkfs.ext4 -F $drive"1"
 mkfs.ext4 -F $drive"2"
 mkfs.ext4 -F $drive"3"
+mkfs.ext4 -F $drive"4"
 mkswap -f $drive"2"
 swapon $drive"2"
 mount $drive"3" /mnt
