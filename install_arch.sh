@@ -3,6 +3,7 @@
 # OR 
 # Source <(culr https://raw.githubusercontent.com/Nevrage/ArchSetup/master/install_arch.sh)
 # ====================
+# user=ylan pw=admin scope=home host=test drive=/dev/sda
 
 clear
 echo "Choose a username:"
@@ -148,11 +149,13 @@ yes | makepkg -si
 yaourt -Sy moreutils
  " - admin
 
-pacman -S --noconfirm $(cat /list_packages | grep -v "^-" | grep -v "^#" |  sed 's/$/ /' | tr -d "\n") 
-su -c "yaourt -S $(cat list_packages | grep  "^-" | grep -v "^#" |  sed 's/$/ /' | sed '/./s/^-//g' | tr -d "\n")" - admin
+pacman -Sy --noconfirm $(cat /list_packages | grep -v "^-" | grep -v "^#" |  sed 's/$/ /' | tr -d "\n") 
+su -c "yaourt -S $(cat /list_packages | grep  "^-" | grep -v "^#" |  sed 's/$/ /' | sed '/./s/^-//g' | tr -d "\n")" - admin
 rm /list_packages
 
-pip3 install jedi rice rtv rice hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine rtichoke menu4rofi buku #terminatables and jupyetr stuff 
+# pip3 install --global jedi rtv radian hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine menu4rofi buku 
+
+#terminatables and jupyetr stuff 
 
 userdel -r admin
 
@@ -172,8 +175,8 @@ bash import.sh
 cd ..
 chmod 755 ~/.profile
 
-ln -s ../.vim ~/.config/nvim
-ln -s ../.vimrc ~/.vim/init.vim
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.vim/init.vim
 rm /usr/bin/vi
 rm /usr/bin/vim
 ls -s /usr/bin/nvim /usr/bin/vi

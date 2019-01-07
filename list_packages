@@ -12,12 +12,12 @@
 - android-tools
 - arm-none-eabi-binutils
 - moreutils
-- bash-pipes
+# bash-pipes
 - arm-none-eabi-gcc
 - stardict
-- vimpc
+# vimpc
 - asciidoc
-- astroid
+# astroid
 - lolcat
 - autossh
 - avr-gcc
@@ -25,7 +25,7 @@
 - avrdude
 - blender
 - cantata
-- cava
+# cava
 - cmus
 - cuetools
 - dbeaver
@@ -33,7 +33,7 @@
 - dfu-util
 - dmenu
 - dutree
-- effitask
+# effitask
 - elinks
 - fff-git
 - fish
@@ -42,7 +42,7 @@
 - glxosd
 - googler
 - grc
-- grsync 
+- grsync
 - htop-vim-git
 - i3lock-fancy-git
 - i3status
@@ -56,10 +56,9 @@
 - mps-youtube
 - musnify-mpd
 - ncdu
-- ncmatrix
 - neomutt
 - neovim
-- nerd-fonts-complete
+# nerd-fonts-complete
 - newsboat
 - nnn-git
 - nodejs
@@ -90,10 +89,10 @@
 - rofi-greenclip
 - ruby-taskwarrior-web
 - sdcv
-- sqlitebrowser 
+- sqlitebrowser
 - steam-fonts
 - surf
-- sxiv 
+- sxiv
 - sxiv-rifle
 - task
 - tasksh
@@ -192,7 +191,7 @@ xdotool
 xorg-xclock
 xsel
 zsnes
-networkmanager git curl lm_sensors 
+networkmanager git curl lm_sensors
 xorg
 xorg-xinit
 xterm
@@ -208,10 +207,10 @@ transmission-cli
 mpv
 mupdf
 compton
-compton-conf
+# compton-conf
 gparted
 pandoc
-texlive-most
+# texlive-most
 mutt
 beep
 ncmpcpp
@@ -223,19 +222,19 @@ geos
 qutebrowser
 ack
 lib32-gconf
-- polybar 
-- ncmatrix 
-- cli-visualizer 
-- i3-gaps 
-- zathura-pdf-poppler 
-- cool-retro-term 
-- unified-remote-server 
-- udunits 
-- steam-fonts 
-- multimc5 
-- openspades 
-- i3lock-fancy-git 
-# leagueoflegends-git 
-# dofus 
+- polybar
+# ncmatrix
+# cli-visualizer
+- i3-gaps
+- zathura-pdf-poppler
+- cool-retro-term
+- unified-remote-server
+- udunits
+- steam-fonts
+# multimc5
+# openspades
+- i3lock-fancy-git
+# leagueoflegends-git
+# dofus
 - grub-customizer
 - grub-themes-solarized-dark-materialized

@@ -1,9 +1,17 @@
 # ArchSetup
 
 # To Do:
+* double multilib?
+* enable sftp for the users
+* update default list packages and find better way to handle failures 
+* colors still wonky for pacman 
+* repalce yaourt by yay trizen or the aurman
+* how to know how long each package took to install?
+* the shitty wiping of the drives
 * link neovim as vim
 * source the tmux config
-* R and python packages
+* R install and libraries
+* python module installation 
 * depersonalize and ask for password or at least do the switch with the variable
 
 # Why
