@@ -53,7 +53,7 @@ export scope
 
 
 wipefs -a $drive 
-# dd if=/dev/zero of=$drive bs=4096
+dd if=/dev/zero of=$drive bs=4096
 
 ## alternatively could try the following: parted rm /dev/sda1, wipefs -a -n 5 or nothing, dd, scrub 
 
