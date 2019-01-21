@@ -85,7 +85,6 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk $drive
   q # Done 
 EOF
 mkfs.ext4 -F $drive"1"
-mkfs.ext4 -F $drive"2"
 mkfs.ext4 -F $drive"3"
 mkfs.ext4 -F $drive"4"
 mkswap -f $drive"2"
@@ -153,9 +152,8 @@ pacman -Sy --noconfirm $(cat /list_packages | grep -v "^-" | grep -v "^#" |  sed
 su -c "yaourt -S $(cat /list_packages | grep  "^-" | grep -v "^#" |  sed 's/$/ /' | sed '/./s/^-//g' | tr -d "\n")" - admin
 rm /list_packages
 
-# pip3 install --global jedi rtv radian hangups stig  pywal wal-steam bpython ptpython jupyterlab pirate-get pandas numpy matplotlib todotxt-machine menu4rofi buku 
-
-#terminatables and jupyetr stuff 
+pip3 install jedi rtv radian hangups stig  pywal wal-steam bpython ptpython pirate-get 
+# jupyterlab pandas numpy matplotlib todotxt-machine menu4rofi terminatables and jupyetr stuff 
 
 userdel -r admin
 
@@ -165,6 +163,7 @@ useradd -m -g users -G audio,lp,optical,storage,video,wheel,games,power,scanner 
 echo "$user|$pw" | chpasswd
 echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --noclear %I $TERM" >> /etc/systemd/system/getty@tty1.service.d/override.conf 
 
+mkdir /home/$user
 $HOME=/home/$user
 cd 
 git clone https://github.com/Nevrage/Dotfiles.git

@@ -10,6 +10,7 @@
 # the wine stuff
 # weather-bar
 - android-tools
+- buku
 - arm-none-eabi-binutils
 - moreutils
 # bash-pipes
@@ -22,6 +23,7 @@
 - autossh
 - avr-gcc
 - avr-libc
+pdflatex
 - avrdude
 - blender
 - cantata
