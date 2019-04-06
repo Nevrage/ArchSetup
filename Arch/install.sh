@@ -185,6 +185,21 @@ ls -s /usr/bin/nvim /usr/bin/vim
 rm -r Dotfiles
 
 su -c"
+
+mkdir ~/R/init
+
+echo "options(repos = c(CRAN='$MRAN'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site 
+Rscript -e ".libPaths("~/R/init/");  install.packages(c('littler', 'docopt'))"
+
+sudo ln -s ~/R/init/littler/examples/install2.r /usr/bin/install2.r
+
+install2.r  tidyverse knitr rmarkdown kableExtra lintr shiny devtools sf 
+# How to organize my R version and libpaths ?
+# devtools::install_github('IRkernel/IRkernel')
+# IRkernel::installspec(name = 'ir34', displayname = 'R 3.4.4')
+# devtools::install_github("jalvesaq/colorout")
+
+
 wal --theme random
 vim +PluginInstall +qall
 ## install R here?" - $user
@@ -195,3 +210,7 @@ exit
 EOF
 umount -r /mnt
 reboot
+
+
+# TODO
+## Install R, install2.r and install the packages in the other script 

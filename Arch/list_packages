@@ -1,4 +1,10 @@
 # acestream-engine
+- rofi-pass
+- mons
+- lyvi
+- pass
+- qtpass
+fzf
 # alacritty
 # flashplugin
 # gambatte: sdl qt or libretro
@@ -114,6 +120,10 @@ pdflatex
 - weechat
 - xidel
 - ympd
+- blue-tools
+pulseaudio-bluetooth
+- stow
+- openscad
 - youtube-dl
 - youtube-viewer
 - tt-rss
@@ -153,6 +163,7 @@ libmupdf
 lynx
 mariadb
 mlocate
+qgit
 mono
 msmtp
 nginx
@@ -179,6 +190,13 @@ rust
 samba
 sbcl
 screen
+- sci-im
+- wedder-git
+- wifi-radar-menu-git
+- gestures
+- libinput-gestures
+gitg
+# gitk
 scrot
 shntool
 sshfs
@@ -244,4 +262,8 @@ lib32-gconf
 # litecli
 # gplaycli
 # samsun printers
-# clerk
+- clerk
+- indicator-sound-switcher
+- bluez-utils
+- blueberry
+# dwarffortress-lnp-git
