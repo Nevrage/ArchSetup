@@ -1,3 +1,7 @@
+# TODO:
+
+* host some of the scripts on an easier to type url
+
 # ArchSetup
 
 * scope are just sed script that preppare the list of packages before prompting the user in vim, this is skipped if a list of packages has been downloaded by the instance script 
@@ -58,3 +62,9 @@
 * Portainer and other ask about other various docker images
 *  jupyter labextension install @jupyterlab/google-drive
 
+
+# TODO:
+
+* CSV file for the packages
+* host that file somewhere easy to type 
+* password and pgp friendly 

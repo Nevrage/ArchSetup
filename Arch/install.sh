@@ -166,13 +166,14 @@ echo -e "[Service]\nExecStart=\nExecStart=-/usr/bin/agetty --autologin $user --n
 mkdir /home/$user
 $HOME=/home/$user
 cd 
-git clone https://github.com/Nevrage/Dotfiles.git
+# check if fotfiles variable exsit ortherwise choose a default location
+git clone https://github.com/Nevrage/dotfiles.git $dotfiles
 mkdir -p ~/.vim/bundle/
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cd Dotfiles
-bash import.sh
-cd ..
-chmod 755 ~/.profile
+cd dotfiles # go to changed location
+# stow !(*README)
+
+# private stuff folder 
 
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.vim/init.vim
